@@ -8,7 +8,7 @@ if(!isset($_SESSION['password']) && !isset($_SESSION['email'])){
     exit();
 }
 
-$database = new Database('localhost', 'root', '', 'new_vsystem');
+$database = new Database('localhost', 'dfoiwidm_voting-system-oop', 'voting-system-oop', 'dfoiwidm_voting-system-oop');
 $user = new User($database);
 $id = $_SESSION['ID'];
 $data = $user->getUserById($id); 

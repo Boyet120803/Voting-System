@@ -12,7 +12,8 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
 
-$database = new Database('localhost', 'root', '', 'new_vsystem');
+
+$database = new Database('localhost', 'dfoiwidm_voting-system-oop', 'voting-system-oop', 'dfoiwidm_voting-system-oop');
 $user = new User($database);
 $id =  $_GET['id'];
 $data = $user->adminsignupUserById($id); 

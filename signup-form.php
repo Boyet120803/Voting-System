@@ -73,7 +73,7 @@ if(isset($_GET['/'])){
                     </div>
                     <div class="d-grid gap-2 col-12 mt-3">
                             <input class="btn btn-primary" type="submit" value="Signup">
-                            <a href="homepage.php" class="btn btn-secondary" type="button">Back</a>
+                            <a href="index.php" class="btn btn-secondary" type="button">Back</a>
                     </div>
             
             </form>

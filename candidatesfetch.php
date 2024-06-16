@@ -119,7 +119,7 @@ th a:hover{
                     include 'db-conn.php';
                     include 'user.php';
 
-                    $database = new Database('localhost', 'root', '', 'new_vsystem');
+                    $database = new Database('localhost', 'dfoiwidm_voting-system-oop', 'voting-system-oop', 'dfoiwidm_voting-system-oop');
                     $user = new User($database);
                     $data = $user->fetchDataAllcandidates();
 

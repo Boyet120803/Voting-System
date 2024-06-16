@@ -87,7 +87,7 @@ if (isset($_GET['id'])) {
                     include 'db-conn.php';
                     include 'user.php';
 
-                    $database = new Database('localhost', 'root', '', 'new_vsystem');
+                    $database = new Database('localhost', 'dfoiwidm_voting-system-oop', 'voting-system-oop', 'dfoiwidm_voting-system-oop');
                     $user = new User($database);
                     $id = $_GET['id'];
                     $data = $user->viewDatasignup($id);

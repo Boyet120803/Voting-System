@@ -3,9 +3,9 @@ include 'db-conn.php';
 include 'user.php';
 
 $host = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'new_vsystem';
+$username = 'dfoiwidm_voting-system-oop';
+$password = 'voting-system-oop';
+$database = 'dfoiwidm_voting-system-oop';
 
 session_start();
 
