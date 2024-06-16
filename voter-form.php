@@ -203,7 +203,7 @@ $data = $user->candidatesvote();
         </div>
     </div>
     <input type="submit" value="Submit Votes">
-    <a href="homepage.php">Back</a>
+    <a href="index.php">Back</a>
 </div>
 
     </form>

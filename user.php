@@ -9,8 +9,8 @@ class User {
 
 
 
-    public function voter($votersname, $votersemailid, $voterscardnum, $president, $vicepresident, $Secretary, $Treasurer, $Pio, $password,$images = null) {
-        $sql = "INSERT INTO users (voters_fullname, voters_registered_email_id, voters_card_number, president, vice_president, secretary, treasurer, pio,password,img) VALUES ('$votersname', '$votersemailid', '$voterscardnum', '$president', '$vicepresident', '$Secretary', '$Treasurer', '$Pio', '$password','$images')";
+    public function voter($votersname, $votersemailid, $voterscardnum, $president, $vicepresident, $Secretary, $Treasurer, $Pio, $password) {
+        $sql = "INSERT INTO users (voters_fullname, voters_registered_email_id, voters_card_number, president, vice_president, secretary, treasurer, pio,password) VALUES ('$votersname', '$votersemailid', '$voterscardnum', '$president', '$vicepresident', '$Secretary', '$Treasurer', '$Pio', '$password')";
         return $this->db->executeQuery($sql);
     }
 

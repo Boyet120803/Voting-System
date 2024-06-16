@@ -23,26 +23,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Pio = $_POST["pio"];
     $password = $_POST['password'];
 
-    $images = null;
-    if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
-        $targetDir = "uploads/";
-        $imageName = basename($_FILES['image']['name']);
-        $targetPath = $targetDir . $imageName;
-
-        if (move_uploaded_file($_FILES['image']['tmp_name'], $targetPath)) {
-            $images = $targetPath;
-        } else {
-            echo "Failed to upload image.";
-        }
-    } else {
-        echo "No image uploaded.";
-    }
-
     if ($user->hasVoted($votersemailid)) {
         header("Location: voter-form.php?message=already_voted");
         exit();
     } else {
-        if ($user->voter($votersname, $votersemailid, $voterscardnum, $president, $vicepresident, $Secretary, $Treasurer, $Pio, $password, $images)) {
+        if ($user->voter($votersname, $votersemailid, $voterscardnum, $president, $vicepresident, $Secretary, $Treasurer, $Pio, $password)) {
             header("Location: voter-form.php?message=success");
             exit();
         } else {
