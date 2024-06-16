@@ -225,7 +225,7 @@ $data = $user->candidatesvote();
         <input type="submit" value="Submit Votes">
         </div>
         <div class="back">
-        <a href="index.php">Back</a>
+        <a href="index.php" class="btn btn-secondary" type="button">Back</a>
         </div>
     </div>
 </div>
