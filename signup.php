@@ -54,17 +54,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
+
+
     if ($age < 18) {
         header("Location: signup-form.php?/=Not-Eligible-To-Vote");
         exit();
     }
 
-
     if ($user->checkemail($email)) {
-        header("Location: signup-form.php?message=This_email_is_already_used.");
+        header("Location: signup-form.php?/=This_email_is_already_used.");
         exit();
     } else {
-    if ($user->signup($role,$fullname, $email, $voterscardnum, $password, $images)) {
+    if ($user->signup($role,$fullname, $email, $voterscardnum, $password,$age,$images)) {
         
         header("Location: signup-form.php?/=Signup-Successfully");
         exit();
