@@ -44,7 +44,7 @@ if(isset($_GET['message'])){
         overflow:hidden;
     }
     .forcandidates{
-        overflow-y: scroll;
+     
         width:65%;
         position:absolute;
         top:10%;
