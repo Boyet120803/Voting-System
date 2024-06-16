@@ -68,7 +68,11 @@ if(isset($_GET['message'])){
        margin-left:300px;
     }
 
-    
+    .one{
+        color:blue;
+         margin-left:170px;
+         
+    }
 
 
 
@@ -146,6 +150,7 @@ $data = $user->candidatesvote();
 <div class="alert alert-danger text-center <?php echo($error == "already_voted" ? 'd-block' : 'd-none') ?> " role="alert">
                    This user was already voted!
      </div> 
+     <h2 class="one">Please Vote Wisely</h2>
     <h3>President</h3><br>
     <div class="ungo">
         <div class="jandel">
