@@ -13,12 +13,15 @@ if(isset($_GET['/'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
+    <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
 <div class="container">
     <div class="row mt-5">
+                   <div class="alert alert-danger text-center <?php echo($error == "Not-Eligible-To-Vote" ? 'd-block' : 'd-none') ?> " role="alert">
+                   Only for those 18 years and older.
+                    </div>  
     <div class="alert alert-info text-center <?php echo($error == "Signup-Successfully" ? 'd-block' : 'd-none') ?> " role="alert">
                    Signup-Successfully
                 </div> 
@@ -47,11 +50,19 @@ if(isset($_GET['/'])){
                     <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text"></div>                 
                 </div>
+                <div class="mb-3">   
+                    <div class="alert alert-danger text-center <?php echo($error == "Age-required" ? 'd-block' : 'd-none') ?> " role="alert">
+                     Age Required
+                    </div>      
+                    <label for="exampleInputEmail1" class="form-label">Age</label>
+                    <input type="number" name="age" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text"></div>                 
+                </div>
                 <div class="mb-3">      
                     <div class="alert alert-danger text-center <?php echo($error == "Voterscardnumber-required" ? 'd-block' : 'd-none') ?> " role="alert">
                     Voters Cardnumber Required
                     </div>          
-                    <label for="exampleInputEmail1" class="form-label">Voters Cardnumber</label>
+                    <label for="exampleInputEmail1" class="form-label">Voters Number</label>
                     <input type="text" name="voterscardnum" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text"></div>                 
                 </div>

@@ -104,15 +104,15 @@ public function adminusersignup($fullname, $email, $voterscardnumber, $password,
     return $conn->query($sql);
 }
 
-
-
-
-public function signup($role,$fullname, $email,$voterscardnum, $password,$images = null) {
-    $sql = "INSERT INTO signup (role,fullname,email,voters_cardnum,password,images) VALUES ('$role','$fullname', '$email','$voterscardnum', '$password', '$images')";
+//signup 
+public function signup($role, $fullname, $email, $voterscardnum, $password, $age, $images = null) {
+    if ($age < 18) {
+        return false; 
+    }
+    $sql = "INSERT INTO signup (role, fullname, email, voters_cardnum, password, ages, images) VALUES ('$role', '$fullname', '$email', '$voterscardnum', '$password', '$age', '$images')";
     return $this->db->executeQuery($sql);
 }
 
-//signup 
  
 public function fetchDatasignup($id) {
     $sql = "SELECT * FROM signup where id = $id";
@@ -294,6 +294,7 @@ public function hasVoted($votersemailid) {
     $row = $result->fetch_assoc();
     return $row['count'] > 0;
 }
+
 
 
 }

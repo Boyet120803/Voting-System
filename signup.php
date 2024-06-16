@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $voterscardnum = $_POST["voterscardnum"];
     $password = $_POST['password'];
- 
+    $age = $_POST['age'];
 
     $images = null;
     if (isset($_FILES['image']) && $_FILES['image']['error'] == UPLOAD_ERR_OK) {
@@ -49,7 +49,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }elseif (empty($images)) {
         header('Location: signup-form.php?/=Image-required');
         exit();
+    }elseif (empty($age)) {
+        header('Location: signup-form.php?/=Age-required');
+        exit();
     }
+
+    if ($age < 18) {
+        header("Location: signup-form.php?/=Not-Eligible-To-Vote");
+        exit();
+    }
+
 
     if ($user->checkemail($email)) {
         header("Location: signup-form.php?message=This_email_is_already_used.");
