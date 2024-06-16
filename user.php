@@ -141,7 +141,7 @@ public function viewDatasignup($id) {
 }
 
 public function fetchDataAll() {
-    $sql = "SELECT * FROM signup";
+    $sql = "SELECT * FROM signup where role = '1'";
     $result = $this->db->executeQuery($sql);
     $data = array();
     if ($result->num_rows > 0) {
