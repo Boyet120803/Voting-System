@@ -75,16 +75,10 @@ if(isset($_GET['message'])){
          
     }
 
-    .submit{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-    }
 
-    .back{
-        display:flex;
-        align-items:center;
-        justify-content:center;
+
+    .back a:hover{
+       background-color:gray;
     }
     .main-sub-back{
         display:flex;
