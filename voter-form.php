@@ -75,7 +75,11 @@ if(isset($_GET['message'])){
          
     }
 
-
+    .submit{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
 
     
 </style>
@@ -208,7 +212,9 @@ $data = $user->candidatesvote();
             </select>
         </div>
     </div>
-    <input type="submit" value="Submit Votes">
+    <div class="submit">
+      <input type="submit" value="Submit Votes">
+    </div>
     <a href="index.php">Back</a>
 </div>
 
