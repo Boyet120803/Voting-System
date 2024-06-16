@@ -76,12 +76,13 @@ if(isset($_GET['message'])){
     }
 
     .back{
-        text-decoration:none;
+        
     }
 
     .back a:hover{
        background-color:gray;
        padding:5px 10px;
+       text-decoration:none;
     }
     .main-sub-back{
         display:flex;
