@@ -86,6 +86,11 @@ if(isset($_GET['message'])){
         align-items:center;
         justify-content:center;
     }
+    .main-sub-back{
+        display:flex;
+        align-items:center;
+        
+    }
 </style>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-dark">
@@ -216,11 +221,13 @@ $data = $user->candidatesvote();
             </select>
         </div>
     </div>
-    <div class="submit">
-      <input type="submit" value="Submit Votes">
-    </div>
-    <div class="back">
-    <a href="index.php">Back</a>
+    <div class="main-sub-back">
+        <div class="submit">
+        <input type="submit" value="Submit Votes">
+        </div>
+        <div class="back">
+        <a href="index.php">Back</a>
+        </div>
     </div>
 </div>
 
