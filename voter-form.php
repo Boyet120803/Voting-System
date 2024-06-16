@@ -71,6 +71,7 @@ if(isset($_GET['message'])){
     .one{
         color:blue;
          margin-left:170px;
+         margin-top:30px;
          
     }
 
@@ -121,7 +122,7 @@ if(isset($_GET['message'])){
             <form action="voter.php" method="post" enctype="multipart/form-data">  
                  
     <h1 class="text-center" ></h1>
-        <div class="container container mt-3 col-md-9">
+        <div class="container">
           <div class="forvoters"hidden>   
              <div class="vote">
                 <label for="">Voter's fullname:</label><br>
