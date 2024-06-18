@@ -63,7 +63,7 @@ if(isset($_GET['/'])){
                     Voters Cardnumber Required
                     </div>          
                     <label for="exampleInputEmail1" class="form-label">Voters Number</label>
-                    <input type="text" name="voterscardnum" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="number" name="voterscardnum" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text"></div>                 
                 </div>
                 <div class="mb-3"> 
